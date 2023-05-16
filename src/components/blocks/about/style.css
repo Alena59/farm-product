@@ -1,0 +1,38 @@
+.about {
+  background: #d8ecfe;
+}
+
+.about__wrapper {
+  padding: 183px 553px 183px 90px;
+  position: relative;
+  overflow: hidden;
+  max-width: 1280px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.about__wrapper::before {
+  position: absolute;
+  top: 37px;
+  right: 0;
+  content: "";
+  width: 446px;
+  height: 627px;
+  background-image: url('../../ui/img/farmer.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.about__content {
+  max-width: 538px;
+}
+
+.about__content h1 {
+  margin-bottom: 24px;
+}
+
+.about__content p {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+}

@@ -1,0 +1,34 @@
+.features {
+  max-width: 1280px;
+  padding: 100px 90px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.features h1:first-child {
+  margin-bottom: 61px;
+}
+
+.features__list {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows:  1fr 1fr;
+  row-gap: 20px;
+  column-gap: 2%;
+  margin-bottom: 64px;
+}
+
+.features__title {
+  margin: 0 0 61px;
+}
+
+.features__item {
+  display: flex;
+  flex-grow: 1;
+}

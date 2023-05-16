@@ -1,0 +1,32 @@
+.feature {
+  padding: 20px;
+  background: #e1edce;
+}
+
+.feature_negative {
+  background: #f8ddd7;
+}
+
+.feature__header {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.feature__text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.feature__owner {
+  background: #88aa4d;
+  color: #ffffff;
+  padding: 4px 10px;
+  margin: 0 0 5px;
+  display: block;
+}
+
+.feature__owner_negative {
+  background: #f75531;
+}
