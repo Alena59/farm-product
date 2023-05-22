@@ -1,6 +1,6 @@
 import React from "react";
 import Title, { TitleSize } from "../title/title";
-import "./style.css";
+import { Feature, Image, Owner, Header, Text } from "./styles";
 
 // Карточка
 function FeatureCard({
@@ -11,31 +11,18 @@ function FeatureCard({
   image // иконка
 }) {
   return (
-    <section className={`feature${isNegative ? " feature_negative" : ""}`}>
-      <header className="feature__header">
-        <img
-          className="feature__img"
-          width={56}
-          height={56}
-          src={image}
-          alt={title}
-        />
+    <Feature isNegative={isNegative}>
+      <Header>
+        <Image width={56} height={56} src={image} alt={title} />
         <div>
-          <span
-            className={`feature__owner${
-              isNegative ? " feature__owner_negative" : ""
-            }`}
-          >
-            {owner}
-          </span>
-          <Title size={TitleSize.EXTRA_SMALL}>{title}</Title>
+          <Owner isNegative={isNegative}>{owner}</Owner>
+          <Title as="h3" size={TitleSize.EXTRA_SMALL}>
+            {title}
+          </Title>
         </div>
-      </header>
-      <p
-        className="feature__text"
-        dangerouslySetInnerHTML={{ __html: about }}
-      />
-    </section>
+      </Header>
+      <Text dangerouslySetInnerHTML={{ __html: about }} />
+    </Feature>
   );
 }
 
