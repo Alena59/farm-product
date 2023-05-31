@@ -1,8 +1,9 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Section } from "../../styled/section/section";
 import { Label } from "../../styled/label/label";
-import TextInput from "../../../components/ui/text-input/text-input";
+import TextInput from "../../ui/text-input/text-input";
 import { Swiper } from "swiper/react";
+import checkboxSelect from "../../../assets/checkbox.svg";
 
 const leftWidth = "353px";
 
@@ -20,6 +21,7 @@ export const StyledOrder = styled(Section)`
   display: flex;
   padding-top: 40px;
   padding-bottom: 0;
+  margin: 0;
   background-color: ${(props) => props.theme.backgroundColorGray};
   max-width: ${(props) => props.theme.pageWidth};
 `;
@@ -33,13 +35,6 @@ export const PriceLabel = styled(Label)`
   margin-bottom: 6px;
 `;
 
-export const PriceValue = styled.span`
-  display: block;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 30px;
-`;
-
 export const ProductSwiper = styled(Swiper)`
   width: 727px;
 
@@ -49,5 +44,37 @@ export const ProductSwiper = styled(Swiper)`
 
   .swiper-slide {
     flex-shrink: 1;
+  }
+`;
+
+export const CheckboxLabel = styled.span`
+  position: relative;
+  display: flex;
+  height: 56px;
+  font-size: 18px;
+  text-align: left;
+  align-items: center;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    right: 0;
+    display: block;
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    ${(props) =>
+      props.$isChecked
+        ? css`
+            background-color: #fc9b27;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background-image: url(${checkboxSelect});
+            background-repeat: no-repeat;
+            background-position: center center;
+          `
+        : css`
+            background-color: ${props.theme.backgroundColorGray};
+            border: 1px solid rgba(0, 0, 0, 0.1);
+          `}
   }
 `;

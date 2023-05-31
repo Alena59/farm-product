@@ -2,8 +2,7 @@ import React from "react";
 import Title from "../../../components/ui/title/title";
 import FeatureCard from "../../ui/feature-card/feature-card";
 import { Features, Ul, Li, StyledButton } from "./styles";
-
-// import "styles.js";
+import { AppRoute } from "../../../const";
 
 // список преимуществ
 function FeaturesList({ features }) {
@@ -17,7 +16,7 @@ function FeaturesList({ features }) {
           </Li>
         ))}
       </Ul>
-      <StyledButton link="/buy">Купить</StyledButton>
+      <StyledButton link={AppRoute.ORDER}>Купить</StyledButton>
     </Features>
   ) : null;
 }

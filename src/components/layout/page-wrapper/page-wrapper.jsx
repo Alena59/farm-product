@@ -1,16 +1,17 @@
 import React from "react";
 import Header from "../header/header";
 import Footer from "../footer/footer";
-import MainPage from "../../pages/main-page/main-page";
+import { Outlet } from "react-router-dom";
+import { Main } from "./styles";
 
 // Обёртка для контента страниц
-function PageWrapper({ features }) {
+function PageWrapper() {
   return (
     <>
       <Header />
-      <main>
-        <MainPage features={features} />
-      </main>
+      <Main>
+        <Outlet />
+      </Main>
       <Footer />
     </>
   );

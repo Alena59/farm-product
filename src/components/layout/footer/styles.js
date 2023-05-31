@@ -2,26 +2,25 @@ import styled from "styled-components";
 import { Section } from "../../../components/styled/section/section";
 
 export const StyledSection = styled(Section)`
-  max-width: 1280px;
-  padding: 30px 90px;
-  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
+  width: ${(props) => props.theme.pageWidth};
+  margin: 0 auto;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: ${(props) => props.theme.footerHeight};
+  background-color: ${(props) => props.theme.colorWhite};
   justify-content: space-between;
-  position: relative;
-
-  &::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: rgba(0, 0, 0, 0.1);
-  }
-`
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+`;
 
 export const Copyright = styled.span`
-  color: #333333;
-  font-style: 18px;
-  line-height: 27px;
-`
+  min-width: 148px;
+  font-size: ${(props) => props.theme.fontSizeDefault};
+  vertical-align: middle;
+  text-align: right;
+`;

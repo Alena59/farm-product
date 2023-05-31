@@ -3,6 +3,7 @@ import PageWrapper from "../layout/page-wrapper/page-wrapper";
 import features from "../../mocks/features";
 import products from "../../mocks/products";
 import { GlobalStyle } from "./styles";
+import ScrollTop from "../../components/ui/scroll-top/scroll-top";
 import Order from "../../components/pages/order/order";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -14,11 +15,12 @@ export default function App() {
     <>
       <GlobalStyle />
       <Router>
+        <ScrollTop />
         <Routes>
-          <Route path={AppRoute.MAIN} element={<PageWrapper features={features} />}>
-            <Route index element={<MainPage />} />
+          <Route path={AppRoute.MAIN} element={<PageWrapper />}>
+            <Route index element={<MainPage features={features} />} />
+            <Route path={AppRoute.ORDER} element={<Order products={products} />} />
           </Route>
-          <Route path="/order.html" element={<Order products={products} />} />
         </Routes>
       </Router>
     </>
