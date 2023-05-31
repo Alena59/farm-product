@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.6c95a462.css",
-    "main.js": "/static/js/main.899f4fa6.js",
-    "static/media/farmer.svg": "/static/media/farmer.93cb091afa923956ca00.svg",
-    "static/media/logo.svg": "/static/media/logo.4f2a5cafb26b3276c0057c5b8712d429.svg",
-    "index.html": "/index.html",
-    "main.6c95a462.css.map": "/static/css/main.6c95a462.css.map",
-    "main.899f4fa6.js.map": "/static/js/main.899f4fa6.js.map"
+    "main.css": "/alena59.github.io/farm-product/static/css/main.c2a37862.css",
+    "main.js": "/alena59.github.io/farm-product/static/js/main.19f194fa.js",
+    "static/media/about.svg": "/alena59.github.io/farm-product/static/media/about.93cb091afa923956ca0028ec77a8bf74.svg",
+    "static/media/logo.svg": "/alena59.github.io/farm-product/static/media/logo.4f2a5cafb26b3276c0057c5b8712d429.svg",
+    "index.html": "/alena59.github.io/farm-product/index.html",
+    "static/media/checkbox.svg": "/alena59.github.io/farm-product/static/media/checkbox.f9c14cec482370f8ca49957a40051734.svg",
+    "main.c2a37862.css.map": "/alena59.github.io/farm-product/static/css/main.c2a37862.css.map",
+    "main.19f194fa.js.map": "/alena59.github.io/farm-product/static/js/main.19f194fa.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c95a462.css",
-    "static/js/main.899f4fa6.js"
+    "static/css/main.c2a37862.css",
+    "static/js/main.19f194fa.js"
   ]
 }
