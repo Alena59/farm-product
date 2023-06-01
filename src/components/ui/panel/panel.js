@@ -11,7 +11,7 @@ export const Panel = styled(Section)`
     0 0 1px rgba(0, 0, 0, 0.04);
   margin-bottom: ${(props) => props.marginBottom || 0}px;
   width: ${(props) => props.$width || "auto"};
-  display: block;
+  display: ${(props) => props.displayFlex || "block"};
   background-color: ${(props) => props.theme.colorWhite};
 `;
 

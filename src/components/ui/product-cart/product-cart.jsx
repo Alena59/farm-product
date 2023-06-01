@@ -21,7 +21,7 @@ function ProductCart({ product }) {
     }
   ];
   return (
-    <Panel>
+    <Panel displayFlex="flex">
       <ProductImage src={product.image} />
       <ContentWrapper>
         <ProductTitle as="h3" size={TitleSize.SMALL}>
