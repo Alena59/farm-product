@@ -6,7 +6,7 @@ import { GlobalStyle } from "./styles";
 import ScrollTop from "../../components/ui/scroll-top/scroll-top";
 import Order from "../../components/pages/order/order";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AppRoute } from "../../const";
 import MainPage from "../../components/pages/main-page/main-page";
 
@@ -14,7 +14,7 @@ export default function App() {
   return (
     <>
       <GlobalStyle />
-      <Router>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <ScrollTop />
         <Routes>
           <Route path={AppRoute.MAIN} element={<PageWrapper />}>
@@ -22,7 +22,8 @@ export default function App() {
             <Route path={AppRoute.ORDER} element={<Order products={products} />} />
           </Route>
         </Routes>
-      </Router>
+      </BrowserRouter>
+      
     </>
   );
 }
